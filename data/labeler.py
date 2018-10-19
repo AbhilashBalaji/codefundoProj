@@ -60,7 +60,7 @@ x_train, x_test, y_train, y_test = train_test_split(
 dummy_y=np_utils.to_categorical(y_cols)
 
 estimator = KerasClassifier(build_fn=baseline_model,
-                            epochs=200, batch_size=5, verbose=1)
+                            epochs=20, batch_size=1, verbose=1)
 kfold = KFold(n_splits=10, shuffle=True)
 
 results = cross_val_score(estimator, x_cols, dummy_y, cv=kfold)
