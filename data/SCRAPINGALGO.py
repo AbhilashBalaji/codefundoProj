@@ -160,10 +160,10 @@ for i in maindf['WindDir']:
 maindf['WindDir_L'] = l
 
 """for index,rows in maindf.iterrows():
-	if maindf.loc[index,'pressure'] < 1005 :
-		maindf.loc[index,"possibility"] = 1 
-	else:
-		maindf.loc[index,"possibility"] = 0 
+    if maindf.loc[index,'pressure'] < 1005 :
+        maindf.loc[index,"possibility"] = 1 
+    else:
+        maindf.loc[index,"possibility"] = 0 
 """
 
 
@@ -182,6 +182,16 @@ for index, rows in maindf.iterrows():
     i = maindf.loc[index, 'datetime']
     if ((i.day > 19) and (i.day < 29) and (i.month == 8)):
         maindf.loc[index, 'hurrthreat'] = 1
+maindf['DaysTH'] = 0
+j = datetime.datetime(2011,8,29)
+for index , row in maindf.iterrows():
+    i = maindf.loc[index,'datetime'];
+    diff  =j-i;
+    maindf.loc[index,'DaysTH'] = diff
+
+
+
+
 
 
 maindf.to_csv("IRENECSV.csv")
