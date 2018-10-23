@@ -49,7 +49,10 @@ def baseline_model():
                   metrics=['accuracy'])
 
 
-cols = ['Lat', 'Lon', 'pressure', 'wavedirection', 'waveheight']
+cols = ['Lat', 'Lon','DaysTH', 'pressure', 'wavedirection', 'waveheight']
+df=df[df['DaysTH'] [0]!='-']
+df['DaysTH']=[i[:3] for i in df['DaysTH']]
+
 pred = ['WindDir_L']
 le = LabelEncoder()
 le.fit(df['WindDir_L'])
