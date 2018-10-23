@@ -3,7 +3,7 @@ import requests
 import pandas as pd
 import datetime
 
-irenebuoy = ["42060"]#, "41043", "41046", "41004", "41013", "41025", "44014", "44009", "44025", "44020"]  # bouynumber array
+irenebuoy = ["42060", "41043", "41046", "41004", "41013", "41025", "44014", "44009", "44025", "44020"]  # bouynumber array
 year = "2011"  # year
 
 
@@ -186,7 +186,8 @@ j = datetime.datetime(2011,8,29)
 for index , row in maindf.iterrows():
     i = maindf.loc[index,'datetime'];
     diff  =j-i;
-    maindf.loc[index,'DaysTH'] = diff
+    maindf.loc[index,'DaysTH'] = diff.days
+maindf=maindf[maindf['DaysTH']>=0]
 
 
 
