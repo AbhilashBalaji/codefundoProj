@@ -36,7 +36,15 @@ python Model_server.py
 
 ### MODEL Specifications 
 Gaussian Navieve Bayes estimator 
-avg Acc : 93%  with 33% Train data split
+avg Acc : 93%  with 33% Train data 
+
+## Services used 
+* Azure Database for MYSQL server
+* ML service workspace
+* Application Insights
+* Virtual Networks
+* Lots of VMs
+* AzureML Webservices 
 
 
 
