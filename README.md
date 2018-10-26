@@ -12,5 +12,5 @@ Once stage 1 is executed optimally, Stage 2 begins. Here, a case study of a part
 Further more, an application can be implemented and open sourced, which on installation on the civilian's phone can be used to give live updates to the user about the change in direction of the hurricane and also the speed and intensity.
 
 
-##NOTE : Model will not work if website supports same origin policy ,as CORS is not suported by AzureML
+## NOTE : Model will not work if website supports same origin policy ,as CORS is not suported by AzureML
 [how to disable same origin policy](https://stackoverflow.com/questions/3102819/disable-same-origin-policy-in-chrome#6083677)
